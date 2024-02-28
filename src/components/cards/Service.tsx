@@ -1,12 +1,13 @@
 import { HStack, Image, Pressable, Text, VStack, View } from 'native-base'
 import React from 'react'
 import { WINDOW_WIDTH } from '../../utils/dimensions'
+import StarRating from 'react-native-star-rating-widget'
 
 type Props = {}
 
 export default function Service({ }: Props) {
     return (
-        <>
+        <Pressable w={WINDOW_WIDTH * 0.7} mr={5}>
             <View h={WINDOW_WIDTH * 0.5}>
                 <Image source={require("../../assets/images/handyman1.webp")} alt="handyman" w="full" h="full" borderTopLeftRadius={15} borderTopRightRadius={15} />
 
@@ -19,6 +20,8 @@ export default function Service({ }: Props) {
                 <View position="absolute" top={-15} right={5} bgColor="cyan.700" borderWidth={2} borderColor={"white"} borderRadius={15} px={2} py={1}>
                     <Text fontSize={"xs"} fontWeight={"semibold"} color="white">N1200</Text>
                 </View>
+
+                <StarRating rating={4} starSize={WINDOW_WIDTH * 0.04} onChange={() => null} />
                 <Text fontSize={"sm"} fontWeight={"semibold"}>Residential Security Patrol</Text>
                 <Text fontSize={"xs"} fontWeight={"light"} mt={-2}>98.50% Completion</Text>
 
@@ -27,6 +30,6 @@ export default function Service({ }: Props) {
                     <Text fontSize={"xs"}>Valentine Orga</Text>
                 </HStack>
             </VStack>
-        </>
+        </Pressable>
     )
 }

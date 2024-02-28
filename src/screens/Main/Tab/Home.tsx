@@ -70,15 +70,19 @@ export default function Home({ }: Props) {
                     <Pressable><Text color="gray.600" fontSize="xs">View All</Text></Pressable>
                 </View>
 
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} mt="4" px="4">
-                    <Pressable w={WINDOW_WIDTH * 0.7} mr={5}>
+                <FlatList
+                    key={"_"}
+                    data={[1, 2, 3, 4, 5, 6]}
+                    keyExtractor={item => item.toString()}
+                    renderItem={({ item, index }) => (
                         <Service />
-                    </Pressable>
-
-                    <Pressable w={WINDOW_WIDTH * 0.7} mr={5}>
-                        <Service />
-                    </Pressable>
-                </ScrollView>
+                    )}
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    ListFooterComponent={<Divider borderWidth={10} borderColor={"white"} />}
+                    mt="4"
+                    px="4"
+                />
             </View>
 
             <View py={10}>
@@ -92,12 +96,11 @@ export default function Home({ }: Props) {
                     data={[1, 2, 3, 4, 5, 6]}
                     keyExtractor={item => item.toString()}
                     renderItem={({ item, index }) => (
-                        <Pressable w="50%" bgColor={"white"} style={index % 2 === 0 ? { borderRightWidth: 5, borderRightColor: "white" } : { borderLeftWidth: 5, borderLeftColor: "white" }}>
-                            <Service />
-                        </Pressable>
+                        <Service />
                     )}
-                    ItemSeparatorComponent={<Divider borderWidth={10} borderColor={"white"} />}
-                    numColumns={2}
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    ListFooterComponent={<Divider borderWidth={10} borderColor={"white"} />}
                     mt="4"
                     px="4"
                 />
