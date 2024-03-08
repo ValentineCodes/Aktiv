@@ -67,18 +67,20 @@ export default function Service({ }: Props) {
                 </View>
 
                 <Text fontWeight={"semibold"} fontSize={"sm"} mt={5} mb={2}>About Provider</Text>
-                <HStack bgColor={"gray.100"} p={4} alignItems={"center"} justifyContent={"space-between"}>
-                    <HStack alignItems={"center"} space={4}>
-                        <Image source={require("../assets/images/profile0.jpeg")} alt="Service" w={16} h={16} borderRadius="full" />
+                <Pressable onPress={() => navigation.navigate("AboutProvider")}>
+                    <HStack bgColor={"gray.100"} p={4} alignItems={"center"} justifyContent={"space-between"}>
+                        <HStack alignItems={"center"} space={4}>
+                            <Image source={require("../assets/images/profile0.jpeg")} alt="Service" w={16} h={16} borderRadius="full" />
 
-                        <VStack>
-                            <Text fontSize={"sm"} fontWeight={"semibold"}>Valentine Orga</Text>
-                            <StarRating rating={4} starSize={WINDOW_WIDTH * 0.04} onChange={() => null} />
-                        </VStack>
+                            <VStack>
+                                <Text fontSize={"sm"} fontWeight={"semibold"}>Valentine Orga</Text>
+                                <StarRating rating={4} starSize={WINDOW_WIDTH * 0.04} onChange={() => null} />
+                            </VStack>
+                        </HStack>
+
+                        <MaterialIcons name="verified" size={WINDOW_WIDTH * 0.07} color={"#1D96E9"} />
                     </HStack>
-
-                    <MaterialIcons name="verified" size={WINDOW_WIDTH * 0.07} color={"#1D96E9"} />
-                </HStack>
+                </Pressable>
 
                 <Text fontWeight={"semibold"} fontSize={"sm"} mt={5} mb={2}>FAQs</Text>
 
