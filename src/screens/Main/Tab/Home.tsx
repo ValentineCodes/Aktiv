@@ -4,10 +4,13 @@ import { WINDOW_HEIGHT, WINDOW_WIDTH } from '../../../utils/dimensions'
 import Ionicons from "react-native-vector-icons/dist/Ionicons"
 import { StyleSheet, TextInput } from 'react-native'
 import Service from '../../../components/cards/Service'
+import { useNavigation } from '@react-navigation/native'
 
 type Props = {}
 
 export default function Home({ }: Props) {
+    const navigation = useNavigation()
+
     return (
         <ScrollView bgColor="white">
             <StatusBar translucent backgroundColor="transparent" />
@@ -49,7 +52,7 @@ export default function Home({ }: Props) {
 
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} mt="4" pl="4">
                     {[1, 2, 3, 4, 5, 6, 7].map(_ => (
-                        <View key={_.toString()} style={styles.categoryContainer}>
+                        <Pressable key={_.toString()} style={styles.categoryContainer} onPress={() => navigation.navigate("Category")}>
                             <View style={styles.categoryIcon}>
                                 <Ionicons
                                     name="person"
@@ -59,7 +62,7 @@ export default function Home({ }: Props) {
                             </View>
 
                             <Text fontWeight="light">Ac CoolCare</Text>
-                        </View>
+                        </Pressable>
                     ))}
                 </ScrollView>
             </View>
@@ -75,7 +78,9 @@ export default function Home({ }: Props) {
                     data={[1, 2, 3, 4, 5, 6]}
                     keyExtractor={item => item.toString()}
                     renderItem={({ item, index }) => (
-                        <Service />
+                        <Pressable w={WINDOW_WIDTH * 0.7} mr={5} onPress={() => navigation.navigate("Service")}>
+                            <Service />
+                        </Pressable>
                     )}
                     horizontal
                     showsHorizontalScrollIndicator={false}
@@ -96,7 +101,9 @@ export default function Home({ }: Props) {
                     data={[1, 2, 3, 4, 5, 6]}
                     keyExtractor={item => item.toString()}
                     renderItem={({ item, index }) => (
-                        <Service />
+                        <Pressable w={WINDOW_WIDTH * 0.7} mr={5} onPress={() => navigation.navigate("Service")}>
+                            <Service />
+                        </Pressable>
                     )}
                     horizontal
                     showsHorizontalScrollIndicator={false}
