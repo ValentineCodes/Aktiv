@@ -92,7 +92,7 @@ export default function Home({ }: Props) {
                 </View>
 
                 <FlatList
-                    key={"_"}
+                    key={"#"}
                     data={[1, 2, 3, 4, 5, 6]}
                     keyExtractor={item => item.toString()}
                     renderItem={({ item, index }) => (

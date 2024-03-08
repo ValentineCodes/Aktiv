@@ -4,9 +4,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
 import Main from '../Main';
+import Service from '../Service';
 
 type StackScreenParamsList = {
     Main: undefined,
+    Service: undefined
 };
 
 const StackScreen = createNativeStackNavigator<StackScreenParamsList>();
@@ -20,6 +22,7 @@ export default function Navigation() {
                     animation: 'slide_from_right',
                 }}>
                 <StackScreen.Screen name="Main" component={Main} />
+                <StackScreen.Screen name="Service" component={Service} />
             </StackScreen.Navigator>
         </NavigationContainer>
     )
