@@ -73,7 +73,7 @@ export default function Profile({ }: Props) {
                     size={WINDOW_WIDTH * 0.055}
                 />}
                 title={"Favorite Services"}
-                onPress={() => console.log("Title")}
+                onPress={() => navigation.navigate("FavoriteServices")}
             />
             <Section
                 icon={<Ionicons
