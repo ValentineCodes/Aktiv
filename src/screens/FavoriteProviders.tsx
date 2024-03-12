@@ -28,7 +28,7 @@ export default function FavoriteProviders({ }: Props) {
                 data={[1, 2, 3, 4, 5, 6]}
                 keyExtractor={item => item.toString()}
                 renderItem={({ item, index }) => (
-                    <Pressable onPress={() => navigation.navigate("Service")} bgColor={"white"} borderRadius={"lg"} w={"45%"} ml={"2"}>
+                    <Pressable onPress={() => navigation.navigate("AboutProvider")} bgColor={"white"} borderRadius={"lg"} w={"45%"} ml={"2"}>
                         <View w={"100%"} style={{ aspectRatio: 16 / 9 }} >
                             <Image source={require("../assets/images/profile0.jpeg")} alt="Provider" w="full" h={"full"} borderTopRadius={"lg"} />
 

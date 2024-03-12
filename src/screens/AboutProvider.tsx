@@ -69,6 +69,7 @@ export default function AboutProvider({ }: Props) {
             <HStack alignItems="center" mx={4} mt={2}>
                 {[1, 2, 3].map((_, index) => (
                     <Image
+                        key={_.toString()}
                         source={require("../assets/images/profile0.jpeg")}
                         alt="Provider"
                         w={12} h={12}
@@ -94,7 +95,7 @@ export default function AboutProvider({ }: Props) {
             </HStack>
 
             {[1, 2, 3, 4, 5].map(_ => (
-                <Pressable onPress={() => navigation.navigate("Service")} bgColor="gray.100" borderRadius="lg" p="4" mt="4" mx={4}>
+                <Pressable key={_.toString()} onPress={() => navigation.navigate("Service")} bgColor="gray.100" borderRadius="lg" p="4" mt="4" mx={4}>
                     <HStack space={2}>
                         <View borderRadius="lg">
                             <Image source={require("../assets/images/profile0.jpeg")} alt="Provider" w={WINDOW_WIDTH * 0.22} h={WINDOW_WIDTH * 0.22} borderRadius="xl" />
