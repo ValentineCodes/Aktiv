@@ -10,6 +10,7 @@ import AboutProvider from '../AboutProvider';
 import FavoriteServices from '../FavoriteServices';
 import FavoriteProviders from '../FavoriteProviders';
 import EditProfile from '../EditProfile';
+import MyReviews from '../MyReviews';
 
 type StackScreenParamsList = {
     Main: undefined,
@@ -18,7 +19,8 @@ type StackScreenParamsList = {
     AboutProvider: undefined,
     FavoriteServices: undefined,
     FavoriteProviders: undefined,
-    EditProfile: undefined
+    EditProfile: undefined,
+    MyReviews: undefined
 };
 
 const StackScreen = createNativeStackNavigator<StackScreenParamsList>();
@@ -38,6 +40,7 @@ export default function Navigation() {
                 <StackScreen.Screen name='FavoriteServices' component={FavoriteServices} />
                 <StackScreen.Screen name='FavoriteProviders' component={FavoriteProviders} />
                 <StackScreen.Screen name='EditProfile' component={EditProfile} />
+                <StackScreen.Screen name='MyReviews' component={MyReviews} />
             </StackScreen.Navigator>
         </NavigationContainer>
     )

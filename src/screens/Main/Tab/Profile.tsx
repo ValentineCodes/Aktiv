@@ -101,7 +101,7 @@ export default function Profile({ }: Props) {
                         size={WINDOW_WIDTH * 0.055}
                     />}
                     title={"My Reviews"}
-                    onPress={() => console.log("Title")}
+                    onPress={() => navigation.navigate("MyReviews")}
                 />
 
                 <View p="4" bgColor={"cyan.100"}>
