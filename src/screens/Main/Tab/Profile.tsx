@@ -49,13 +49,13 @@ export default function Profile({ }: Props) {
                 <View borderWidth={3} borderRadius={"full"} borderColor={"cyan.300"}>
                     <Image source={require("../../../assets/images/profile0.jpeg")} alt="Service" w={WINDOW_WIDTH * 0.25} h={WINDOW_WIDTH * 0.25} borderRadius="full" borderWidth={3} borderColor={"black"} />
 
-                    <View position={"absolute"} bottom={0} right={-5} bgColor={"cyan.300"} borderRadius={"full"} borderWidth={2} borderColor={"black"} p={2}>
+                    <Pressable onPress={() => navigation.navigate("EditProfile")} position={"absolute"} bottom={0} right={-5} bgColor={"cyan.300"} borderRadius={"full"} borderWidth={2} borderColor={"black"} p={2}>
                         <Ionicons
                             name="create-outline"
                             color="white"
                             size={WINDOW_WIDTH * 0.05}
                         />
-                    </View>
+                    </Pressable>
                 </View>
                 <VStack alignItems="center">
                     <Text fontSize={"sm"} fontWeight={"semibold"}>Valentine Orga</Text>
