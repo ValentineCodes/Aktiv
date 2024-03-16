@@ -16,6 +16,10 @@ export default function Home({ }: Props) {
             <StatusBar translucent backgroundColor="transparent" />
 
             <View h={WINDOW_HEIGHT * 0.4} bgColor="cyan.50">
+                <Pressable position={"absolute"} top={10} right={5} bgColor={"gray.100"} borderRadius={"full"} p={2.5} onPress={() => navigation.navigate("Notifications")}>
+                    <Ionicons name="notifications-outline" color="black" size={WINDOW_WIDTH * 0.06} />
+                </Pressable>
+
                 <View style={styles.searchContainer}>
                     <View style={styles.searchInputContainer}>
                         <Ionicons

@@ -13,6 +13,7 @@ import EditProfile from '../EditProfile';
 import MyReviews from '../MyReviews';
 import Settings from '../Settings';
 import ChangePassword from '../ChangePassword';
+import Notifications from '../Notifications';
 
 type StackScreenParamsList = {
     Main: undefined,
@@ -24,7 +25,8 @@ type StackScreenParamsList = {
     EditProfile: undefined,
     MyReviews: undefined,
     Settings: undefined,
-    ChangePassword: undefined
+    ChangePassword: undefined,
+    Notifications: undefined
 };
 
 const StackScreen = createNativeStackNavigator<StackScreenParamsList>();
@@ -47,6 +49,7 @@ export default function Navigation() {
                 <StackScreen.Screen name='MyReviews' component={MyReviews} />
                 <StackScreen.Screen name='Settings' component={Settings} />
                 <StackScreen.Screen name='ChangePassword' component={ChangePassword} />
+                <StackScreen.Screen name='Notifications' component={Notifications} />
             </StackScreen.Navigator>
         </NavigationContainer>
     )
