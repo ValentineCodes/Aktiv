@@ -11,6 +11,8 @@ import FavoriteServices from '../FavoriteServices';
 import FavoriteProviders from '../FavoriteProviders';
 import EditProfile from '../EditProfile';
 import MyReviews from '../MyReviews';
+import Settings from '../Settings';
+import ChangePassword from '../ChangePassword';
 
 type StackScreenParamsList = {
     Main: undefined,
@@ -20,7 +22,9 @@ type StackScreenParamsList = {
     FavoriteServices: undefined,
     FavoriteProviders: undefined,
     EditProfile: undefined,
-    MyReviews: undefined
+    MyReviews: undefined,
+    Settings: undefined,
+    ChangePassword: undefined
 };
 
 const StackScreen = createNativeStackNavigator<StackScreenParamsList>();
@@ -41,6 +45,8 @@ export default function Navigation() {
                 <StackScreen.Screen name='FavoriteProviders' component={FavoriteProviders} />
                 <StackScreen.Screen name='EditProfile' component={EditProfile} />
                 <StackScreen.Screen name='MyReviews' component={MyReviews} />
+                <StackScreen.Screen name='Settings' component={Settings} />
+                <StackScreen.Screen name='ChangePassword' component={ChangePassword} />
             </StackScreen.Navigator>
         </NavigationContainer>
     )

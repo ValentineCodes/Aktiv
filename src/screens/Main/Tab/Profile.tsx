@@ -37,11 +37,13 @@ export default function Profile({ }: Props) {
             <HStack bgColor="cyan.300" px="4" pt="12" pb="4" flexDirection="row" alignItems="center" justifyContent="space-between">
                 <Text fontSize="md" fontWeight="semibold" color="white">Profile</Text>
 
-                <Ionicons
-                    name="settings-outline"
-                    color="white"
-                    size={WINDOW_WIDTH * 0.06}
-                />
+                <Pressable onPress={() => navigation.navigate("Settings")}>
+                    <Ionicons
+                        name="settings-outline"
+                        color="white"
+                        size={WINDOW_WIDTH * 0.06}
+                    />
+                </Pressable>
             </HStack>
 
             {/* Bio */}
